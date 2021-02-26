@@ -1,8 +1,16 @@
 const App = {
     data() {
         return {
-            number: 0,
-            name: 'adnan'
+            todo: '',
+            todos: [
+                'my name is adnan', 'what is your name'
+            ]
+        }
+    },
+    methods: {
+        storetodo() {
+            this.todos.push(this.todo),
+                this.todo = ''
         }
     }
 }
