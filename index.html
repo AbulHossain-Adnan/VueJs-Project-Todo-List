@@ -13,19 +13,34 @@
 </head>
 
 <body>
-    <div id="app">
-        <p>Todo List</p>
 
-        <input name="input" v-model="todo">
-        <input type="submit" value="add" @click="storetodo">
-        <ol>
-            <li v-for="todo in todos">{{todo}}</li>
-        </ol>
+    <div class="card text-white bg-info">
+        <div class="card-header">Todo List</div>
+        <div class="card-body">
+
+            <div id="app">
+                <p>Todo List</p>
+
+                <input name="input" v-model="todo ">
+                <input type="submit" value="add" @click="storetodo ">
+                <ol>
+                    <p>
+                        <li v-for="todo in todos ">{{todo}}" "<button class="btn btn-success ">edit</button><button class="btn btn-danger ">delete</button></li>
+                    </p>
+
+                </ol>
 
 
+            </div>
+
+
+        </div>
     </div>
 
+
+
+    <script src="app.vue.js "></script>
 </body>
-<script src="app.vue.js"></script>
+
 
 </html>
