@@ -1,7 +1,8 @@
 const App = {
     data() {
         return {
-            number: 0
+            number: 0,
+            name: 'adnan'
         }
     }
 }
