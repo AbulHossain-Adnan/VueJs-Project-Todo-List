@@ -11,6 +11,9 @@ const App = {
         storetodo() {
             this.todos.push(this.todo),
                 this.todo = ''
+        },
+        edittodo(todo, index) {
+            this.todo = todo
         }
     }
 }

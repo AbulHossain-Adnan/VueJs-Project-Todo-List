@@ -25,7 +25,7 @@
                 <input type="submit" value="add" @click="storetodo ">
                 <ol>
                     <p>
-                        <li v-for="todo in todos ">{{todo}}" "<button class="btn btn-success ">edit</button><button class="btn btn-danger ">delete</button></li>
+                        <li v-for="(todo,index) in todos ">{{todo}}" "<button class="btn btn-success" @click="edittodo">edit</button><button class="btn btn-danger" @click="deletetodo">delete</button></li>
                     </p>
 
                 </ol>
