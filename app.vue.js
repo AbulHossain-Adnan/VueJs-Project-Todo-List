@@ -22,7 +22,13 @@ const App = {
 
 
         },
-        updatetodo(index, todo) {
+        updatetodo() {
+            this.todos.splice(this.selectedindex, 1, this.todo),
+                this.isedditing = false
+
+        },
+        deletetodo(index) {
+            this.todos.splice(index, 1)
 
         }
     }
