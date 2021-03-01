@@ -20,12 +20,23 @@
 
             <div id="app">
                 <p>Todo List</p>
+                <div v-if="!isedditing">
+                    <input name="input" v-model="todo ">
+                    <input type="submit" value="add" @click="storetodo ">
+                </div>
 
-                <input name="input" v-model="todo ">
-                <input type="submit" value="add" @click="storetodo ">
+                <div v-else>
+                    <input name="input" v-model="todo ">
+                    <input type="submit" value="update" @click="storetodo ">
+                </div>
+
                 <ol>
                     <p>
-                        <li v-for="(todo,index) in todos ">{{todo}}" "<button class="btn btn-success" @click="edittodo">edit</button><button class="btn btn-danger" @click="deletetodo">delete</button></li>
+                        <li v-for="(todo,index) in todos ">{{todo}}
+
+                            <button class="btn btn-success" @click="edittodo(index,todo)">edit</button>
+                            <button class="btn btn-danger" @click="deletetodo(index,todo)">delete</button>
+                        </li>
                     </p>
 
                 </ol>
